@@ -1,7 +1,3 @@
-# things to note:
-	# make sure you have all the modules
-	# type the correct url(along with http or https)
-	
 import urllib
 import urllib.request, urllib.error, urllib.parse
 from urllib.request import Request, urlopen
