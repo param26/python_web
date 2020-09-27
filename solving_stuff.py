@@ -1,6 +1,5 @@
 # things to note:
 	# make sure you have all the modules
-	# make a folder named spring(see line 55) in which the images will get downloaded
 	# type the correct url(along with http or https)
 import urllib
 import urllib.request, urllib.error, urllib.parse
@@ -27,8 +26,8 @@ for each_tag in tags:
 	imgs = each_tag.get('src', None)
 	if imgs == None or len(imgs) < 3 or len(re.findall('^.*\.(jpg|JPG|gif|GIF|png|PNG|jpeg|JPEG)$',imgs)) == 0:
 		continue
-	type1 = [] #local address, we will combine parent address and image address/ kind of like on http://www.google.com
-	type2 = [] #improper addressing, like some on  https://www.wallhaven.cc
+	type1 = [] #local addresses
+	type2 = [] 
 	t1 = re.findall('^//', imgs)
 	if len(t1) > 0:
 		type1 = 1
@@ -37,7 +36,6 @@ for each_tag in tags:
 		if len(t2) == 0:
 			type2 = 1
 	# print("img ",imgs)
-	#useless stuff
 	# if imgs[0] == '/'
 	# if needFullUrl == 1:
 		# url = url + imgs
@@ -73,7 +71,3 @@ for each_tag in tags:
 		counter+=1;
 print("program was successful")
 
-
-# todo
-# implement lazy load data-src
-# set depth
