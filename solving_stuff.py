@@ -2,7 +2,6 @@
 	# make sure you have all the modules
 	# make a folder named spring(see line 55) in which the images will get downloaded
 	# type the correct url(along with http or https)
-	# right now this can only surf the main page(depth of 1)
 import urllib
 import urllib.request, urllib.error, urllib.parse
 from urllib.request import Request, urlopen
@@ -16,9 +15,6 @@ if not os.path.exists(directory):
 	os.makedirs(directory)
 url = input("Enter the url: ")
 
-# some good wallpaper sites are:
-	# https://www.walllhaven.cc
-	# https://www.hdwallpapers.in
 	
 req = Request(url, headers = {'User-Agent':'Mozilla/5.0'})
 html = urllib.request.urlopen(req).read()
